@@ -16,7 +16,7 @@ from django.contrib.auth import login
 class ValidatePhoneSendOTP(APIView):
 
     def setUrl(self, var1, var2, to):
-        url = "https://2factor.in/API/R1/?module=TRANS_SMS&apikey=da42ccc7-fa64-11e9-9fa5-0200cd936042&to={}&from=devHKT&templatename=HK_APP&var1={}&var2={}".format(var1, var2, to)
+        url = "https://2factor.in/API/R1/?module=TRANS_SMS&apikey={** API-KEY **}&to={}&from={** YOUR SENDER ID **}&templatename={** Template Name **}&var1={}&var2={}".format(var1, var2, to)
         return url
 
     def post(self, request, *args, **kwargs):
